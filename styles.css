@@ -254,7 +254,7 @@ footer {
   header {
     flex-direction: row;
     align-items: flex-start;
-    max-width: 300px;
+    max-width: 350px;
   }
 
   .main-section {
@@ -280,7 +280,7 @@ footer {
   }
 
   section {
-    margin-top: 30%;
+    margin-top: 40%;
     text-align: left;
     padding-bottom: 5%;
   }
@@ -312,6 +312,9 @@ footer {
   }
 
   footer {
-    padding: 2em 10px;
+    font-size: 14px;
+    padding: 1.5em 10px;
+    text-align: center;
+    justify-content: center;
   }
 }
