@@ -274,13 +274,13 @@ footer {
 
   .title-background {
     width: 24vh;
-    height: 40vh;
+    height: 35vh;
     justify-content: center;
     left: 50%;
   }
 
   section {
-    margin-top: 40%;
+    margin-top: 45%;
     text-align: left;
     padding-bottom: 5%;
   }
