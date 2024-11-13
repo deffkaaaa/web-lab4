@@ -1,8 +1,9 @@
-.poppins-bold {
-    font-family: "Poppins", sans-serif;
+@font-face {
+    font-family: "Poppins";
+    src: url("fonts/Poppins/Poppins-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
-}  
+}
 
 * {
     margin: 0;
@@ -53,8 +54,8 @@ main {
 h1 {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
-    font-size: 48px; /* Розмір шрифту для заголовка */
-    color: #ffffff; /* Білий колір тексту */
+    font-size: 48px;
+    color: #ffffff;
     margin-bottom: 20px;
 }
 
