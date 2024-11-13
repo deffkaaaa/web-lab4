@@ -250,7 +250,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 700px) {
   header {
     flex-direction: row;
     align-items: flex-start;
@@ -274,13 +274,13 @@ footer {
 
   .title-background {
     width: 24vh;
-    height: 35vh;
+    height: 45vh;
     justify-content: center;
     left: 50%;
   }
 
   section {
-    margin-top: 45%;
+    margin-top: 30%;
     text-align: left;
     padding-bottom: 5%;
   }
@@ -313,7 +313,6 @@ footer {
 
   footer {
     font-size: 14px;
-    padding: 1.5em 10px;
     text-align: center;
     justify-content: center;
   }
