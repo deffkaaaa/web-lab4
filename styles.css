@@ -1,102 +1,285 @@
 @font-face {
-    font-family: "Poppins";
-    src: url("fonts/Poppins/Poppins-Bold.ttf") format("truetype");
-    font-weight: 700;
-    font-style: normal;
+  font-family: "Poppins-Bold";
+  src: url("fonts/Poppins/Poppins-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url("fonts/Poppins/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+html,
 body {
-    font-family: Arial, sans-serif;
-    background-color: #3f2a79;
-    color: #ffffff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  background-color: #3f2a79;
+  color: #ffffff;
+  overflow: hidden;
+  z-index: 0;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    align-items: center;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .social-icons a {
-    margin-left: 10px;
+  margin-left: 15px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #cccccc;
 }
 
 .social-icons img {
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 50px 20px;
+  height: calc(100vh - 25vh);
 }
 
 .content {
-    max-width: 1000px;
-    text-align: center;
+  position: relative;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+  height: 100%;
+  flex: 1;
+}
+
+.title-background {
+  background-color: #4fd1c5;
+  width: 38vh;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 25.8%;
+  transform: translateX(-50%);
+  top: -10%;
+  height: calc(100vh - 50px);
+  z-index: 1;
 }
 
 h1 {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-size: 48px;
-    color: #ffffff;
-    margin-bottom: 20px;
+  font-family: "Poppins-Bold", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.main-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  z-index: 2;
 }
 
 .laptop-image {
-    width: 100%;
-    max-width: 600px;
-    margin: 20px 0;
+  width: 60%;
+  max-width: 600px;
+  z-index: 2;
 }
 
 .info {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 section {
-    width: 45%;
-    text-align: left;
+  width: 100%;
+  margin-top: -3em;
+  margin-bottom: 6em;
+  margin-left: 3em;
 }
 
 h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+  font-family: "Poppins-Medium", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: #cccccc;
+  margin-bottom: 1em;
+  letter-spacing: 0.1em;
 }
 
 p {
-    font-size: 16px;
-    margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-left: 3em;
 }
 
 a {
-    color: #ffffff;
-    text-decoration: underline;
+  font-size: 14px;
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+section a {
+  font-family: "Poppins-Medium", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: #cccccc;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+  line-height: 5;
+  margin-left: 3.5em;
+}
+
+section p {
+  max-width: 27vh;
+}
+
+section a:hover {
+  color: #ffffff;
 }
 
 footer {
-    background-color: #333333;
-    color: #ffffff;
-    text-align: center;
-    padding: 20px;
+  background-color: #333333;
+  color: #ffffff;
+  text-align: center;
+  justify-content: center;
+  padding: 4em;
+  font-size: 14px;
+  z-index: 2;
+}
+
+/* Медіа-запити для адаптації до меншого екрану */
+
+@media screen and (max-width: 1200px) {
+  .main-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .laptop-image {
+    width: 80%;
+    max-width: 500px;
+  }
+
+  .info {
+    gap: 15px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  p {
     font-size: 14px;
-    margin-top: 20px;
+  }
+
+  .title-background {
+    width: 35vw; /* При звуженні ширина фону стає 35% від ширини вікна */
+    height: 50vh; /* Висота фону стає 50% від висоти вікна */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .laptop-image {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .main-section {
+    gap: 15px;
+  }
+
+  section {
+    margin-left: 1em;
+  }
+
+  footer {
+    padding: 2em 10px;
+  }
+
+  .title-background {
+    width: 40vw; /* При ще більшому звуженні фону ширина буде 40% */
+    height: 40vh; /* Висота фону буде 40% */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title-background {
+    width: 50vw; /* При максимальному звуженні ширина фону буде 50% */
+    height: 30vh; /* Висота фону буде 30% */
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  a {
+    font-size: 12px;
+  }
+
+  .main-section {
+    gap: 10px;
+  }
+
+  footer {
+    padding: 1.5em 10px;
+  }
 }
