@@ -63,6 +63,7 @@ main {
   justify-content: space-between;
   padding: 50px 20px;
   height: calc(100vh - 25vh);
+  overflow: auto;
 }
 
 .content {
@@ -137,13 +138,13 @@ h2 {
 }
 
 p {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   margin-left: 3em;
 }
 
 a {
-  font-size: 14px;
+  font-size: 18px;
   color: #ffffff;
   text-decoration: underline;
 }
@@ -156,11 +157,12 @@ section a {
   text-decoration: underline;
   transition: color 0.3s ease;
   line-height: 5;
-  margin-left: 3.5em;
+  margin-left: 3em;
+  text-underline-offset: 5px;
 }
 
 section p {
-  max-width: 27vh;
+  max-width: 18vw;
 }
 
 section a:hover {
@@ -177,17 +179,16 @@ footer {
   z-index: 2;
 }
 
-/* Медіа-запити для адаптації до меншого екрану */
-
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
   .main-section {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    align-items: flex-start;
   }
 
   .laptop-image {
     width: 80%;
-    max-width: 500px;
+    max-width: 400px;
+    left: 25.8%;
   }
 
   .info {
@@ -202,13 +203,10 @@ footer {
     font-size: 22px;
   }
 
-  p {
-    font-size: 14px;
-  }
-
   .title-background {
-    width: 35vw; /* При звуженні ширина фону стає 35% від ширини вікна */
-    height: 50vh; /* Висота фону стає 50% від висоти вікна */
+    width: 30vh;
+    height: 100vh;
+    left: 25%;
   }
 }
 
@@ -248,38 +246,72 @@ footer {
   }
 
   .title-background {
-    width: 40vw; /* При ще більшому звуженні фону ширина буде 40% */
-    height: 40vh; /* Висота фону буде 40% */
+    width: 40vw;
   }
 }
 
 @media screen and (max-width: 480px) {
+  header {
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: 300px;
+  }
+
+  .main-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .laptop-image {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .info {
+    width: 90%;
+    text-align: center;
+  }
+
   .title-background {
-    width: 50vw; /* При максимальному звуженні ширина фону буде 50% */
-    height: 30vh; /* Висота фону буде 30% */
+    width: 24vh;
+    height: 50vh;
+    justify-content: center;
+    left: 50%;
+  }
+
+  section {
+    margin-top: 25%;
+    text-align: left;
+    padding-bottom: 5%;
+  }
+
+  section p {
+    max-width: 50vw;
+  }
+
+  #goals {
+    margin-bottom: 0.5em;
   }
 
   h1 {
     font-size: 32px;
+    text-align: center;
   }
 
   h2 {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   p {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   a {
-    font-size: 12px;
-  }
-
-  .main-section {
-    gap: 10px;
+    font-size: 16px;
+    margin-left: 45em;
   }
 
   footer {
-    padding: 1.5em 10px;
+    padding: 3em 10px;
   }
 }
